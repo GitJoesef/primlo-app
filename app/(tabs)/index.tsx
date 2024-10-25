@@ -1,18 +1,17 @@
 import React from 'react';
 import { ImageComponent, StyleSheet, Text, View, Button, TouchableOpacity, TextInput, } from 'react-native';
-import CheckBox from '@react-native-community/checkbox'; 
-import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 import EditScreenInfo from '@/components/EditScreenInfo';
 
 
   export default function TabOneScreen() {
     return (
-      <View style={styles.container}>
+      <View style={styles.headerContainer}>
         <View style={styles.headerContainer}>
         <Text style={styles.headerText}>Create Account</Text>
         </View>
-        <View style={styles.container}>
+        <View style={styles.headerContainer}>
           <TextInput
             style={styles.input}
             placeholder="First Name"
@@ -35,11 +34,11 @@ import EditScreenInfo from '@/components/EditScreenInfo';
           </Text>
           <Button title="Create Account" onPress={() => { /* Handle create account */ }} />
           <TouchableOpacity style={styles.socialButton}>
-          <Icon name="google" size={20} color="#fff" />
+          {/* <Icon name="google" size={20} color="#fff" /> */}
           <Text style={styles.socialButtonText}>Continue with Google</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialButton}>
-          <Icon name="apple" size={20} color="#fff" />
+          {/* <Icon name="apple" size={20} color="#fff" /> */}
           <Text style={styles.socialButtonText}>Continue with Apple</Text>
         </TouchableOpacity>
         </View>
