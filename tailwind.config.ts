@@ -12,9 +12,12 @@ module.exports = {
     './modules/**/*.{js,jsx,ts,tsx}',
     'index.tsx',
   ],
-  presets: [require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primaryBlue: '#0065FF',
+      },
+    },
   },
   plugins: [],
 }
