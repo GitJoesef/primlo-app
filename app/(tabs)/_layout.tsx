@@ -5,7 +5,7 @@ import { Pressable } from 'react-native';
 
 import Colors from '@/constants/Colors';
 import { useColorScheme } from '@/components/useColorScheme';
-import { HomeIcon } from '@/assets/images';
+import { BookingIcon, ExploreIcon, HomeIcon, InActiveBookingIcon, InActiveExploreIcon, InActiveHomeIcon, InActiveProfileIcon, ProfileIcon } from '@/assets/images';
 
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
@@ -27,7 +27,7 @@ export default function TabLayout() {
         name="home"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <HomeIcon />,
+          tabBarIcon: ({ color, focused }) => focused ? <HomeIcon /> : <InActiveHomeIcon />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -48,21 +48,21 @@ export default function TabLayout() {
         name="bookings"
         options={{
           title: 'Reservations',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color, focused }) => focused ? <BookingIcon /> : <InActiveBookingIcon />,
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Appointments',
+          tabBarIcon: ({ color, focused }) => focused ? <ExploreIcon /> : <InActiveExploreIcon />,
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: 'Profile',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color, focused }) => focused ? <ProfileIcon /> : <InActiveProfileIcon />,
         }}
       />
     </Tabs>

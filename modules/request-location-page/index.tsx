@@ -9,7 +9,6 @@ const RequestLocationPage = () => {
             <PrimaryText title="" altClassName="" />
             <PrimaryText title="" altClassName="" />
             <Button title="Allow location access" type="primary" onClick={()=> router.navigate("/(tabs)/home")}/>
-
             <Pressable>
             <PrimaryText title="Enter location manually" altClassName="" />
             </Pressable>
